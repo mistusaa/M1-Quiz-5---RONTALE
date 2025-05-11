@@ -35,9 +35,8 @@ class GameOverScene extends Phaser.Scene {
             .setScale(0.4);
 
         restartButton.on('pointerdown', () => {
-            // Important: Reset global music flag if MenuScene checks it
-            // this.sys.game.isMusicPlaying = false; // Or handle music differently
-            this.scene.start('MenuScene'); // Or GameScene directly to restart
+            
+            this.scene.start('MenuScene'); 
         });
         restartButton.on('pointerover', () => restartButton.setScale(0.5));
         restartButton.on('pointerout', () => restartButton.setScale(0.4));
